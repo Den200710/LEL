@@ -1,15 +1,15 @@
 import time
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService, Service
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 from pages.filling_basket import Filling_basket
 from pages.main_page import Main_page
 from pages.man_shoes import Man_shoes
 from pages.select_model import Select_model
-
+options = webdriver.ChromeOptions()
 
 def test_select_for_him():
-    service = Service(executable_path='C:\\Users\\User\\PycharmLessons\\resource\\chromedriver.exe')
-    driver = webdriver.Chrome(service=service)
+    driver = webdriver.Chrome(options=options, service=ChromeService(ChromeDriverManager().install()))
 
     print('Start test 1')
 

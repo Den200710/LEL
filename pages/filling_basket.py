@@ -1,19 +1,11 @@
 import time
-
 from selenium.webdriver import Keys
 from selenium.webdriver.support import expected_conditions as EC
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-
 from base.base_class import Base
 
-
 class Filling_basket(Base):
-
-    def __init__(self,driver):
-        super().__init__(driver)
-        self.driver = driver
 
     #Locators
 
@@ -34,10 +26,6 @@ class Filling_basket(Base):
     color_basket = "//table[@class='table-attribute']/tbody/tr[2]/td[2]"
     model_basket = "//table[@class='table-attribute']/tbody/tr[1]/td[2]"
     #Getters
-
-    def __init__(self, driver):
-        super().__init__(driver)
-        self.get_price_model = None
 
     def get_name(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.name)))
@@ -114,7 +102,7 @@ class Filling_basket(Base):
     # Methods
 
     def check_filling_price(self):
-        self.assert_word(self.get_price_basket(), '4 510.00 pуб.')
+        self.assert_word(self.get_price_basket(), '4 500.00 pуб.')
         print('Good basket price')
     def check_filling_size(self):
         self.assert_word(self.get_size_basket(), '43')
