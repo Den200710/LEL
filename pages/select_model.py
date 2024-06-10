@@ -19,12 +19,16 @@ class Select_model(Base):
 
     def get_select_product_1(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.select_product_1)))
+
     def get_select_size_product_1(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.select_size_product_1)))
+
     def get_basket_select_product_1(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.basket_select_product_1)))
+
     def get_go_basket(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.go_basket)))
+
     def get_select_model_word(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.select_model_word)))
 
@@ -33,12 +37,15 @@ class Select_model(Base):
     def click_select_product_1(self):
         self.get_select_product_1().click()
         print('Click select_product_1')
+
     def click_select_size_product_1(self):
         self.get_select_size_product_1().click()
         print('Click select_size_product_1')
+
     def click_basket_select_product_1(self):
         self.get_basket_select_product_1().click()
         print('Click basket_select_product_1')
+
     def click_go_basket(self):
         self.get_go_basket().click()
         print('Click go_basket')

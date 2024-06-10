@@ -21,14 +21,19 @@ class Man_shoes(Base):
 
     def get_type_shoes(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.type_shoes)))
+
     def get_select_kedy(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.select_kedy)))
+
     def get_select_size(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.select_size)))
+
     def get_size_43(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.size_43)))
+
     def get_apply_button(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.apply_button)))
+
     def get_man_word(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.man_word)))
 
@@ -37,15 +42,19 @@ class Man_shoes(Base):
     def click_type_shoes(self):
         self.get_type_shoes().click()
         print('click_type_shoes')
+
     def click_select_kedy(self):
         self.get_select_kedy().click()
         print('click_select_kedy')
+
     def click_filtr_size(self):
         self.get_select_size().click()
         print('click_filtr_size')
+
     def click_size_selection(self):
         self.get_size_43().click()
         print('click_size_selection')
+
     def click_apply_filtr(self):
         self.get_apply_button().click()
         print('click_apply_filtr')

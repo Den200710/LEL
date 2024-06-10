@@ -18,6 +18,7 @@ class Main_page(Base):
 
     def get_for_him(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.for_him)))
+
     def get_main_word(self):
         return WebDriverWait(self.driver,30).until(EC.element_to_be_clickable((By.XPATH,self.main_word)))
 
